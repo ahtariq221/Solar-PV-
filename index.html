@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Pakistan Solar PV GIS</title>
+
+
+    <!-- MapLibre CSS -->
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/maplibre-gl@5.7.1/dist/maplibre-gl.css"
+    >
+
+
+    <!-- Application CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MAP
+====================================================== -->
+
+<div id="map"></div>
+
+
+<!-- =====================================================
+     SIDEBAR
+====================================================== -->
+
+<div id="sidebar">
+
+
+    <div class="header">
+
+        <h1>Uncounted Solar Gigawatts</h1>
+
+        <p>
+            Pakistan Urban Solar Mapping
+        </p>
+
+    </div>
+
+
+    <!-- CITY -->
+
+    <div class="section">
+
+        <h3>City</h3>
+
+        <select id="citySelect">
+
+            <option value="islamabad">
+                Islamabad
+            </option>
+
+            <option value="lahore">
+                Lahore
+            </option>
+
+            <option value="karachi">
+                Karachi
+            </option>
+
+        </select>
+
+
+        <button id="loadCity">
+
+            Load City
+
+        </button>
+
+    </div>
+
+
+    <!-- LAYERS -->
+     <!-- =====================================================
+     SUMMARY
+====================================================== -->
+
+<div class="section">
+
+    <h3>Solar PV Summary</h3>
+    
+
+    <div class="summary-card">
+
+        <div class="summary-row">
+
+            <span>Solar Area</span>
+
+            <strong id="solarArea">
+                0 m²
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>No. of Panels</span>
+
+            <strong id="panelCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Installed Capacity</span>
+
+            <strong id="installedCapacity">
+                0 kW
+            </strong>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="section">
+
+        <h3>Layers</h3>
+          <label class="layer-item">
+
+    <input
+        type="checkbox"
+        id="labelsCheck"
+        checked
+    >
+
+    <span class="legend-labels"></span>
+
+    Basemap Labels
+
+</label>
+
+
+        <label class="layer-item">
+
+            <input
+                type="checkbox"
+                id="buildingsCheck"
+                checked
+            >
+
+            <span class="legend-building"></span>
+
+            Buildings
+
+        </label>
+
+
+        <label class="layer-item">
+
+            <input
+                type="checkbox"
+                id="solarCheck"
+                checked
+            >
+
+            <span class="legend-solar"></span>
+
+            Solar PV
+
+        </label>
+
+
+        <label class="layer-item">
+
+            <input
+                type="checkbox"
+                id="boundaryCheck"
+                checked
+            >
+
+            <span class="legend-boundary"></span>
+
+            Boundary
+
+        </label>
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="section">
+
+        <h3>Information</h3>
+
+        <div id="cityInfo">
+
+            Select a city and click
+            <b>Load City</b>.
+
+        </div>
+
+    </div>
+  
+
+
+</div>
+
+
+<!-- =====================================================
+     COORDINATES
+====================================================== -->
+
+<!-- <div id="coordinates">
+
+    Longitude: -
+    <br>
+
+    Latitude: -
+
+</div> -->
+
+
+<!-- =====================================================
+     MAPLIBRE
+====================================================== -->
+
+<script
+    src="https://unpkg.com/maplibre-gl@5.7.1/dist/maplibre-gl.js">
+</script>
+
+
+<!-- =====================================================
+     APPLICATION JS
+====================================================== -->
+
+<script src="js/app.js"></script>
+<!-- <label class="layer-item">
+
+    <input
+        type="checkbox"
+        id="labelsCheck"
+        checked
+    >
+
+    <span class="legend-labels"></span>
+
+</label> -->
+
+
+</body>
+
+</html>
